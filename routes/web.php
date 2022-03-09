@@ -72,3 +72,8 @@ Route::get('/events-feed', function(){
 
 
 });
+
+Route::get('/db-migrate', function () {
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
