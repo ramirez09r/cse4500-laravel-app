@@ -3,7 +3,11 @@
 @section('title', 'Calendar')
 
 @section('content_header')
-    <h1>Calendar</h1>
+    <div class="container-fluid">
+        <a href="{{ route('calendar.create') }} " class="btn btn-primary" >Add a New Event</a>
+        <h1>Calendar</h1>
+    </div>
+    </div>
 @stop
 
 @section('content')
