@@ -39,13 +39,12 @@ class CalendarController extends Controller
         {
             $validated = $request->validate([
                 'title' => 'required',
-                'progress' => 'required',
             ]);
 
-            $todo = Todo::create([
+            $calendar = Calendar::create([
                 'title' => $request->title,
-                'start_at AS start' => $request->start,
-                'end_at AS end' => $request->end,
+                'start_at' => $request->start,
+                'end_at' => $request->end,
             ]);
 
             return $this->index();
