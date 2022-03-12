@@ -40,7 +40,7 @@ class CalendarController extends Controller
                 'title' => 'required',
             ]);
 
-            $calendar = Calendar::create([
+            $calendar = Event::create([
                 'title' => $request->title,
                 'start_at' => $request->start,
                 'end_at' => $request->end,
